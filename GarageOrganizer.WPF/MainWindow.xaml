@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GarageOrganizer.WPF"
+        xmlns:enums="clr-namespace:GarageOrganizer.WPF.Enums"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
@@ -18,9 +19,11 @@
         <Rectangle Fill="DarkBlue" Grid.Row="0" Grid.Column="0" Stroke="Black" Margin="0,0,0,0"/>
         <Label Content="Mechanika Pojazdowa" Grid.Row="0" Grid.Column="0" Margin="0,0,0,0" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" />
         <Rectangle Fill="DarkBlue" Grid.Row="0" Grid.Column="1" Stroke="Black" Margin="0,0,0,0"/>
-        <Button Content="Samochody" Margin="5,5,5,0" Grid.Row="1" Grid.Column="0" VerticalAlignment="Top" Height="30"/>
-        <Button Content="Klienci" Margin="5,40,5,0" Grid.Row="1" Grid.Column="0" VerticalAlignment="Top" Height="30"/>
+        <Button Content="Samochody" Margin="5,5,5,0" Grid.Row="1" Grid.Column="0" VerticalAlignment="Top" Height="30" 
+                Command="{Binding Navigator.UpdateCurrentViewModelCommand}" CommandParameter="{x:Static enums:ViewType.Cars}"/>
+        <Button Content="Klienci" Margin="5,40,5,0" Grid.Row="1" Grid.Column="0" VerticalAlignment="Top" Height="30"
+                Command="{Binding Navigator.UpdateCurrentViewModelCommand}" CommandParameter="{x:Static enums:ViewType.Clients}"/>
         <Button Content="Kalendarz" Margin="5,75,5,0" Grid.Row="1" Grid.Column="0" VerticalAlignment="Top" Height="30"/>
-        <ContentControl Content="{Binding CurrentPageViewModel}" Grid.Row="1" Grid.Column="1" Margin="0,0,0,0"/>
+        <ContentControl Content="{Binding Navigator.CurrentViewModel}" Grid.Row="1" Grid.Column="1" Margin="0,0,0,0"/>
     </Grid>
 </Window>
