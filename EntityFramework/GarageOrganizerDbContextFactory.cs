@@ -9,7 +9,7 @@ namespace GarageOrganizer.EntityFramework
 {
     public class GarageOrganizerDbContextFactory : IDesignTimeDbContextFactory<GarageOrganizerDbContext>
     {
-        public GarageOrganizerDbContext CreateDbContext(string[] args)
+        public GarageOrganizerDbContext CreateDbContext(string[] args = null)
         {
             var options = new DbContextOptionsBuilder<GarageOrganizerDbContext>();
             options.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=GarageOrganizerDb;Trusted_Connection=True;");
