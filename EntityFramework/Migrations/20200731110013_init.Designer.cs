@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GarageOrganizer.EntityFramework.Migrations
 {
     [DbContext(typeof(GarageOrganizerDbContext))]
-    [Migration("20200729132452_added-relation")]
-    partial class addedrelation
+    [Migration("20200731110013_init")]
+    partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

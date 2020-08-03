@@ -8,6 +8,8 @@ namespace EntityFramework
         public DbSet<Client> Clients { get; set; }
         public DbSet<Car> Cars { get; set; }
 
+        public GarageOrganizerDbContext(DbContextOptions options) : base(options) { }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Client>()
@@ -16,13 +18,6 @@ namespace EntityFramework
                 .IsRequired();
 
             base.OnModelCreating(modelBuilder);
-        }
-
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=GarageOrganizerDb;Trusted_Connection=True;");
-
-            base.OnConfiguring(optionsBuilder);
         }
     }
 }
