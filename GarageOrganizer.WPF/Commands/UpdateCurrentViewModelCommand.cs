@@ -11,7 +11,7 @@ namespace GarageOrganizer.WPF.Commands
     public class UpdateCurrentViewModelCommand : ICommand
     {
         public event EventHandler CanExecuteChanged;
-        private readonly INavigator _navigator;
+        private INavigator _navigator;
 
         public UpdateCurrentViewModelCommand(INavigator navigator)
         {

@@ -7,6 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\EntityFramework\GarageOrganizer.EntityFramework.csproj" />
+    <ProjectReference Include="..\GarageOrganizer.Domain\GarageOrganizer.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="Views\AddClientView.xaml.cs">
       <DependentUpon>AddClientView.xaml</DependentUpon>
     </Compile>

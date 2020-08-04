@@ -4,7 +4,7 @@ using System.Text;
 
 namespace GarageOrganizer.WPF.ViewModels
 {
-    public class CarsViewModel: BaseViewModel
+    public class CarsViewModel : BaseViewModel
     {
     }
 }
