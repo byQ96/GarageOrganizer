@@ -1,8 +1,20 @@
 ﻿<Application x:Class="GarageOrganizer.WPF.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:viewmodels="clr-namespace:GarageOrganizer.WPF.ViewModels"
+             xmlns:views="clr-namespace:GarageOrganizer.WPF.Views"
              xmlns:local="clr-namespace:GarageOrganizer.WPF">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <DataTemplate DataType="{x:Type viewmodels:CarsViewModel}">
+                <views:CarsView></views:CarsView>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewmodels:ClientsViewModel}">
+                <views:ClientsView></views:ClientsView>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewmodels:CalendarViewModel}">
+                <views:CalendarView></views:CalendarView>
+            </DataTemplate>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

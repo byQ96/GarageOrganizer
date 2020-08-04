@@ -10,6 +10,11 @@ namespace GarageOrganizer.Domain.Models
     {
         public int Id { get; set; }
         public string RegistrationNumber { get; set; }
+        // producent
+        // rok
+        // pojemność (engine)
+        // rodzaj paliwa
+        // numer vin
         public string Model { get; set; }
         public string Engine { get; set; }
         public string Power { get; set; }
