@@ -23,7 +23,8 @@
                 Command="{Binding Navigator.UpdateCurrentViewModelCommand}" CommandParameter="{x:Static enums:ViewType.Cars}"/>
         <Button Content="Klienci" Margin="5,40,5,0" Grid.Row="1" Grid.Column="0" VerticalAlignment="Top" Height="30"
                 Command="{Binding Navigator.UpdateCurrentViewModelCommand}" CommandParameter="{x:Static enums:ViewType.Clients}"/>
-        <Button Content="Kalendarz" Margin="5,75,5,0" Grid.Row="1" Grid.Column="0" VerticalAlignment="Top" Height="30"/>
+        <Button Content="Kalendarz" Margin="5,75,5,0" Grid.Row="1" Grid.Column="0" VerticalAlignment="Top" Height="30"
+                Command="{Binding Navigator.UpdateCurrentViewModelCommand}" CommandParameter="{x:Static enums:ViewType.Calendar}"/>
         <ContentControl Content="{Binding Navigator.CurrentViewModel}" Grid.Row="1" Grid.Column="1" Margin="0,0,0,0"/>
     </Grid>
 </Window>
