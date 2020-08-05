@@ -6,6 +6,12 @@
              xmlns:local="clr-namespace:GarageOrganizer.WPF">
     <Application.Resources>
         <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Styles/CommonStyle.xaml"/>
+                <ResourceDictionary Source="/Styles/NavigationBarStyle.xaml"/>
+                <ResourceDictionary Source="/Styles/LogoStyle.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            
             <DataTemplate DataType="{x:Type viewmodels:CarsViewModel}">
                 <views:CarsView></views:CarsView>
             </DataTemplate>

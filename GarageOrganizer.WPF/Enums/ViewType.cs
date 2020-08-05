@@ -8,6 +8,7 @@ namespace GarageOrganizer.WPF.Enums
     {
         Cars,
         Clients,
-        Calendar
+        Calendar,
+        Visits
     }
 }

@@ -3,28 +3,21 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:GarageOrganizer.WPF"
-        xmlns:enums="clr-namespace:GarageOrganizer.WPF.Enums"
+        xmlns:controls="clr-namespace:GarageOrganizer.WPF.Controls"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="auto"/>
             <ColumnDefinition MinWidth="500"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="1*" MinHeight="50"/>
-            <RowDefinition Height="9*" MinHeight="450"/>
+            <RowDefinition Height="auto" MinHeight="50"/>
+            <RowDefinition Height="*" MinHeight="450"/>
         </Grid.RowDefinitions>
-        <Rectangle Fill="DarkBlue" Grid.Row="0" Grid.Column="0" Stroke="Black" Margin="0,0,0,0"/>
-        <Label Content="Mechanika Pojazdowa" Grid.Row="0" Grid.Column="0" Margin="0,0,0,0" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" />
-        <Rectangle Fill="DarkBlue" Grid.Row="0" Grid.Column="1" Stroke="Black" Margin="0,0,0,0"/>
-        <Button Content="Samochody" Margin="5,5,5,0" Grid.Row="1" Grid.Column="0" VerticalAlignment="Top" Height="30" 
-                Command="{Binding Navigator.UpdateCurrentViewModelCommand}" CommandParameter="{x:Static enums:ViewType.Cars}"/>
-        <Button Content="Klienci" Margin="5,40,5,0" Grid.Row="1" Grid.Column="0" VerticalAlignment="Top" Height="30"
-                Command="{Binding Navigator.UpdateCurrentViewModelCommand}" CommandParameter="{x:Static enums:ViewType.Clients}"/>
-        <Button Content="Kalendarz" Margin="5,75,5,0" Grid.Row="1" Grid.Column="0" VerticalAlignment="Top" Height="30"
-                Command="{Binding Navigator.UpdateCurrentViewModelCommand}" CommandParameter="{x:Static enums:ViewType.Calendar}"/>
-        <ContentControl Content="{Binding Navigator.CurrentViewModel}" Grid.Row="1" Grid.Column="1" Margin="0,0,0,0"/>
+        <TextBlock Style="{StaticResource Logo}" Text="Mechanika Pojazdowa" Background="{StaticResource PrimaryBrush1}"/>
+        <Rectangle Fill="{StaticResource PrimaryBrush1}" Grid.Column="1"/>
+        <controls:NavigationBar Grid.Row="1" Background="{StaticResource PrimaryBrush2}"/>
+        <ContentControl Content="{Binding Navigator.CurrentViewModel}" Grid.Row="1" Grid.Column="1"/>
     </Grid>
 </Window>
