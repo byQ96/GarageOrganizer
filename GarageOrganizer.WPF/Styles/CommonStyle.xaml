@@ -22,7 +22,7 @@
     </Style>
     <Style x:Key="LargeFont" TargetType="{x:Type Control}">
         <Setter Property="FontFamily" Value="Calibri"/>
-        <Setter Property="FontSize" Value="24"/>
+        <Setter Property="FontSize" Value="28"/>
         <Setter Property="Foreground" Value="White"/>
     </Style>
 
@@ -39,7 +39,7 @@
     </Style>
     <Style x:Key="LargeFontTB" TargetType="{x:Type FrameworkElement}">
         <Setter Property="TextElement.FontFamily" Value="Calibri"/>
-        <Setter Property="TextElement.FontSize" Value="24"/>
+        <Setter Property="TextElement.FontSize" Value="28"/>
         <Setter Property="TextElement.Foreground" Value="White"/>
     </Style>
 </ResourceDictionary>

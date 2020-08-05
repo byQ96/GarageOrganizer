@@ -6,7 +6,7 @@
         xmlns:controls="clr-namespace:GarageOrganizer.WPF.Controls"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid RenderOptions.EdgeMode="Aliased">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition MinWidth="500"/>
