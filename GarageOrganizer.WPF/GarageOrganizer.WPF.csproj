@@ -7,8 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\EntityFramework\GarageOrganizer.EntityFramework.csproj" />
     <ProjectReference Include="..\GarageOrganizer.Domain\GarageOrganizer.Domain.csproj" />
+    <ProjectReference Include="..\GarageOrganizer.EntityFramework\GarageOrganizer.EntityFramework.csproj" />
   </ItemGroup>
 
   <ItemGroup>
