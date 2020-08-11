@@ -7,8 +7,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\plus.png" />
+    <None Remove="Images\search.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\GarageOrganizer.Domain\GarageOrganizer.Domain.csproj" />
     <ProjectReference Include="..\GarageOrganizer.EntityFramework\GarageOrganizer.EntityFramework.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\plus.png" />
+    <Resource Include="Images\search.png" />
   </ItemGroup>
 
   <ItemGroup>

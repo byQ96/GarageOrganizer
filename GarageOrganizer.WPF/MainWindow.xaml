@@ -17,7 +17,7 @@
         </Grid.RowDefinitions>
         <TextBlock Style="{StaticResource Logo}" Text="Mechanika Pojazdowa" Background="{StaticResource PrimaryBrush1}"/>
         <Rectangle Fill="{StaticResource PrimaryBrush1}" Grid.Column="1"/>
-        <controls:NavigationBar Grid.Row="1" Background="{StaticResource PrimaryBrush2}"/>
+        <controls:NavigationBar Grid.Row="1" Background="{StaticResource PrimaryBrush2}" Padding="0 5"/>
         <ContentControl Content="{Binding Navigator.CurrentViewModel}" Grid.Row="1" Grid.Column="1"/>
     </Grid>
 </Window>
